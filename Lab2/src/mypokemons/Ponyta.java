@@ -1,7 +1,6 @@
 package mypokemons;
 
 import mymoves.ponyta.Facade;
-import mymoves.ponyta.FireBlast;
 import mymoves.ponyta.Rest;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;

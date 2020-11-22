@@ -1,10 +1,9 @@
 package mypokemons;
 
-import mymoves.bellossom.Acid;
-import mymoves.bellossom.DazzlingGleam;
-import mymoves.bellossom.EnergyBall;
 import mymoves.bellossom.LeafBlade;
-import ru.ifmo.se.pokemon.Pokemon;
+import mymoves.gloom.Acid;
+import mymoves.oddish.DazzlingGleam;
+import mymoves.oddish.EnergyBall;
 import ru.ifmo.se.pokemon.Type;
 
 public class Bellossom extends Gloom {

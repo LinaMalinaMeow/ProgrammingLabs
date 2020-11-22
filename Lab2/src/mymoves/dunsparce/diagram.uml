@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="715.0" y="325.0">ru.ifmo.se.pokemon.Effect</node>
+    <node x="1150.0" y="80.0">ru.ifmo.se.pokemon.StatusMove</node>
+    <node x="0.0" y="250.0">mymoves.oddish.EnergyBall</node>
+    <node x="128.0" y="405.0">mypokemons.Dunsparce</node>
+    <node x="0.0" y="565.0">mypokemons.Bellossom</node>
+    <node x="1247.0" y="325.0">ru.ifmo.se.pokemon.Team</node>
+    <node x="320.0" y="250.0">ru.ifmo.se.pokemon.FireMove</node>
+    <node x="552.0" y="250.0">mymoves.rapidash.FireBlast</node>
+    <node x="260.0" y="485.0">mypokemons.Rapidash</node>
+    <node x="574.0" y="325.0">ru.ifmo.se.pokemon.Battle</node>
+    <node x="932.0" y="250.0">mymoves.dunsparce.WildCharge</node>
+    <node x="856.0" y="325.0">ru.ifmo.se.pokemon.Status</node>
+    <node x="1122.0" y="325.0">ru.ifmo.se.pokemon.Stat</node>
+    <node x="802.0" y="0.0">ru.ifmo.se.pokemon.Move</node>
+    <node x="690.0" y="80.0">ru.ifmo.se.pokemon.DamageMove</node>
+    <node x="1228.0" y="250.0">mymoves.ponyta.Facade</node>
+    <node x="136.0" y="325.0">ru.ifmo.se.pokemon.Pokemon</node>
+    <node x="268.0" y="405.0">mypokemons.Ponyta</node>
+    <node x="417.0" y="325.0">ru.ifmo.se.pokemon.Messages</node>
+    <node x="452.0" y="250.0">mymoves.gloom.Acid</node>
+    <node x="692.0" y="250.0">mymoves.bellossom.LeafBlade</node>
+    <node x="1344.0" y="250.0">mymoves.rapidash.Megahorn</node>
+    <node x="832.0" y="250.0">mymoves.ponyta.Rest</node>
+    <node x="1080.0" y="250.0">mymoves.dunsparce.DragonRush</node>
+    <node x="307.2235294117647" y="160.0">ru.ifmo.se.pokemon.SpecialMove</node>
+    <node x="1372.0" y="325.0">ru.ifmo.se.pokemon.Type</node>
+    <node x="1162.0" y="160.0">mymoves.dunsparce.Agility</node>
+    <node x="998.0" y="160.0">ru.ifmo.se.pokemon.PhysicalMove</node>
+    <node x="148.0" y="250.0">mymoves.oddish.DazzlingGleam</node>
+    <node x="16.0" y="485.0">mypokemons.Gloom</node>
+    <node x="12.0" y="405.0">mypokemons.Oddish</node>
+    <node x="997.0" y="325.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="mypokemons.Gloom" target="mypokemons.Oddish">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.rapidash.FireBlast" target="ru.ifmo.se.pokemon.SpecialMove">
+      <point x="0.0" y="-15.0" />
+      <point x="612.0" y="220.0" />
+      <point x="429.6235294117647" y="220.0" />
+      <point x="54.400000000000034" y="15.0" />
+    </edge>
+    <edge source="mymoves.rapidash.Megahorn" target="ru.ifmo.se.pokemon.PhysicalMove">
+      <point x="0.0" y="-15.0" />
+      <point x="1400.0" y="210.0" />
+      <point x="1130.0" y="210.0" />
+      <point x="60.0" y="15.0" />
+    </edge>
+    <edge source="mypokemons.Oddish" target="ru.ifmo.se.pokemon.Pokemon">
+      <point x="0.0" y="-15.0" />
+      <point x="60.0" y="380.0" />
+      <point x="153.33333333333334" y="380.0" />
+      <point x="-34.66666666666666" y="15.0" />
+    </edge>
+    <edge source="ru.ifmo.se.pokemon.PhysicalMove" target="ru.ifmo.se.pokemon.DamageMove">
+      <point x="0.0" y="-15.0" />
+      <point x="1070.0" y="135.0" />
+      <point x="786.0" y="135.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+    <edge source="mypokemons.Ponyta" target="ru.ifmo.se.pokemon.Pokemon">
+      <point x="0.0" y="-15.0" />
+      <point x="316.0" y="380.0" />
+      <point x="222.66666666666666" y="380.0" />
+      <point x="34.66666666666666" y="15.0" />
+    </edge>
+    <edge source="ru.ifmo.se.pokemon.SpecialMove" target="ru.ifmo.se.pokemon.DamageMove">
+      <point x="0.0" y="-15.0" />
+      <point x="375.2235294117647" y="135.0" />
+      <point x="722.0" y="135.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="ru.ifmo.se.pokemon.DamageMove" target="ru.ifmo.se.pokemon.Move">
+      <point x="0.0" y="-15.0" />
+      <point x="754.0" y="55.0" />
+      <point x="822.0" y="55.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.ponyta.Rest" target="ru.ifmo.se.pokemon.PhysicalMove">
+      <point x="0.0" y="-15.0" />
+      <point x="872.0" y="220.0" />
+      <point x="1034.0" y="220.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="mypokemons.Bellossom" target="mypokemons.Gloom">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.bellossom.LeafBlade" target="ru.ifmo.se.pokemon.PhysicalMove">
+      <point x="0.0" y="-15.0" />
+      <point x="752.0" y="210.0" />
+      <point x="1010.0" y="210.0" />
+      <point x="-60.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.ponyta.Facade" target="ru.ifmo.se.pokemon.PhysicalMove">
+      <point x="0.0" y="-15.0" />
+      <point x="1276.0" y="220.0" />
+      <point x="1106.0" y="220.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.gloom.Acid" target="ru.ifmo.se.pokemon.SpecialMove">
+      <point x="0.0" y="-15.0" />
+      <point x="492.0" y="230.0" />
+      <point x="402.42352941176466" y="230.0" />
+      <point x="27.19999999999999" y="15.0" />
+    </edge>
+    <edge source="mymoves.dunsparce.Agility" target="ru.ifmo.se.pokemon.StatusMove">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="mypokemons.Dunsparce" target="ru.ifmo.se.pokemon.Pokemon">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.dunsparce.DragonRush" target="ru.ifmo.se.pokemon.PhysicalMove">
+      <point x="0.0" y="-15.0" />
+      <point x="1144.0" y="230.0" />
+      <point x="1082.0" y="230.0" />
+      <point x="12.0" y="15.0" />
+    </edge>
+    <edge source="ru.ifmo.se.pokemon.StatusMove" target="ru.ifmo.se.pokemon.Move">
+      <point x="0.0" y="-15.0" />
+      <point x="1214.0" y="55.0" />
+      <point x="862.0" y="55.0" />
+      <point x="20.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.oddish.EnergyBall" target="ru.ifmo.se.pokemon.SpecialMove">
+      <point x="0.0" y="-15.0" />
+      <point x="64.0" y="220.0" />
+      <point x="320.8235294117647" y="220.0" />
+      <point x="-54.39999999999998" y="15.0" />
+    </edge>
+    <edge source="ru.ifmo.se.pokemon.FireMove" target="ru.ifmo.se.pokemon.SpecialMove">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="mypokemons.Rapidash" target="mypokemons.Ponyta">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="mymoves.oddish.DazzlingGleam" target="ru.ifmo.se.pokemon.SpecialMove">
+      <point x="0.0" y="-15.0" />
+      <point x="224.0" y="230.0" />
+      <point x="348.0235294117647" y="230.0" />
+      <point x="-27.19999999999999" y="15.0" />
+    </edge>
+    <edge source="mymoves.dunsparce.WildCharge" target="ru.ifmo.se.pokemon.PhysicalMove">
+      <point x="0.0" y="-15.0" />
+      <point x="996.0" y="230.0" />
+      <point x="1058.0" y="230.0" />
+      <point x="-12.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.611111111111111" x="728.0000000000001" y="297.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

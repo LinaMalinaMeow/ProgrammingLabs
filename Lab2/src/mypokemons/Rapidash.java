@@ -1,10 +1,9 @@
 package mypokemons;
 
 import mymoves.ponyta.Facade;
-import mymoves.ponyta.FireBlast;
 import mymoves.ponyta.Rest;
+import mymoves.rapidash.FireBlast;
 import mymoves.rapidash.Megahorn;
-import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
 public class Rapidash extends Ponyta {

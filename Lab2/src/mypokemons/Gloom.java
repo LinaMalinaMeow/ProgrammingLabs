@@ -1,9 +1,6 @@
 package mypokemons;
 
 import mymoves.gloom.Acid;
-import mymoves.gloom.DazzlingGleam;
-import mymoves.gloom.EnergyBall;
-import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
 public class Gloom extends Oddish {
