@@ -1,0 +1,16 @@
+package mymoves.rapidash;
+
+import ru.ifmo.se.pokemon.PhysicalMove;
+import ru.ifmo.se.pokemon.Pokemon;
+import ru.ifmo.se.pokemon.Stat;
+import ru.ifmo.se.pokemon.Type;
+
+public class Megahorn extends PhysicalMove {
+    public Megahorn(){
+        super(Type.BUG,120,85);
+    }
+    @Override
+    protected void applyOppDamage(Pokemon def, double damage){
+        def.setMod(Stat.HP, (int) Math.round(damage));
+    }
+}
