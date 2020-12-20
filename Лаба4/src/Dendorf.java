@@ -1,6 +1,6 @@
 public class Dendorf extends Human{
     private String Name;
-    private String notise;
+    private String notice;
     private String on;
     private String add;
     @Override
@@ -10,8 +10,8 @@ public class Dendorf extends Human{
     protected Dendorf(String name) {
         super(name);
     }
-    public String getNotise() {
-        return this.notise;
+    public String getNotice() {
+        return this.notice;
     }
     public String getOn() {
         return this.on;
@@ -19,9 +19,9 @@ public class Dendorf extends Human{
     public String getAdd() {
         return this.add;
     }
-    public Dendorf(String name,String notise,String on,String add){
+    public Dendorf(String name,String notice,String on,String add){
         this(name);
-        this.notise = notise;
+        this.notice = notice;
         this.on=on;
         this.add=add;
     }

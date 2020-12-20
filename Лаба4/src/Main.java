@@ -156,7 +156,7 @@ public class Main {
         System.out.println(erebusImplSmoked.getName() + " и" + terrorImplExtinct.getName() + " на " + thePeninsulaOfRossImplInfo.getName());
         thePeninsulaOfRossImplInfo.setName(" полуостров Росса");
         whiteLine.setName(" белесой полоской ");
-        System.out.println(Location.West1.getName() + whiteLine.getName() + iceBarier.getAction() + iceBarier.getDescription() + iceBarier.getName() + height.getName() + "ой" + Fut.HAIGHT3.getName());
+        System.out.println(Location.West1.getName() + whiteLine.getName() + iceBarier.getAction() + iceBarier.getDescription() + iceBarier.getName() + height.getName() + "ой" + Fut.height3.getName());
         System.out.println(abstTHing.getName() + abstTHing.getAction() + abstTHing.getDescription() + icepiks.getName());
 
 
@@ -170,8 +170,8 @@ public class Main {
             System.out.print(kvebekkaImplSay.getName());
             kvebekkaImplSay.speech(" ясно говорил");
             ship.canGo(" идти нельзя ");
-        } catch (GoException goExeption) {
-            System.out.println(goExeption.getMessage());
+        } catch (GoException goException) {
+            System.out.println(goException.getMessage());
         } finally {
             System.out.println(atnoonName + makMerdo.setLocation(we, " вошли в "));
         }
@@ -196,14 +196,14 @@ public class Main {
 
 
         System.out.println(erebusImplSmoked.getSmoke(" дым ", " выпускал"));
-        System.out.println(dendorf.getName() + dendorf.getNotise() + dendorf.getOn() + snowWall.getDescription() + snowWall.getName() + snowWall.getAction() + snowWall.getHow());
+        System.out.println(dendorf.getName() + dendorf.getNotice() + dendorf.getOn() + snowWall.getDescription() + snowWall.getName() + snowWall.getAction() + snowWall.getHow());
         System.out.println(dendorf.getName() + dendorf.getAdd() + po.getName() + po.getAction());
         System.out.println(thisMount.getName() + thisMount.getDescription() + day.getDate(" 1840 году "));
         System.out.println(" и " + po.action(" написал ") + po.speech("\" Было сердце мое горячее\""));
 
 
-        TheEndException theEndExeptionYes = new TheEndException("Это конец рассказа");
-        TheEndException theEndExeptionNo = new TheEndException("Это все равно конец рассказа");
+        TheEndException theEndExceptionYes = new TheEndException("Это конец рассказа");
+        TheEndException theEndExceptionNo = new TheEndException("Это все равно конец рассказа");
         move.movement2();
         move.choice2();
         move.a2Void();
@@ -211,9 +211,9 @@ public class Main {
             @Override
             public void ending(Move move) {
                 if (move.a2 == 1) {
-                    //throw new TheEndException(theEndExeptionYes.getMessage());
+                    //throw new TheEndException(theEndExceptionYes.getMessage());
                     System.out.println("Это конец рассказа");
-                }  else throw new TheEndException(theEndExeptionNo.getMessage());
+                }  else throw new TheEndException(theEndExceptionNo.getMessage());
             }
         };
         theEnd.ending(move);

@@ -1,8 +1,8 @@
 
 public enum Fut {
-    HAIGHT1(" 12700 футов"),
+    height1(" 12700 футов"),
     HAIGTH2(" 10900 футов"),
-    HAIGHT3(" 200 футов");
+    height3(" 200 футов");
 
 
     private final String name;

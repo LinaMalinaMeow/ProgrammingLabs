@@ -8,15 +8,15 @@ public class Height {
         return this.Name;
     }
 
-    String haight2Name = Fut.HAIGTH2.getName();
-    String haight1Name = Fut.HAIGHT1.getName();
+    String height2Name = Fut.HAIGTH2.getName();
+    String height1Name = Fut.height1.getName();
 
     public void provade(){
-        System.out.print(getName()+"ой"+ haight1Name);
+        System.out.print(getName()+"ой"+ height1Name);
     }
 
     public String equal(TerrorImplExtinct terrorImplExtinct){
-        return getName()+"a"+terrorImplExtinct.getName()+ "="+haight2Name;
+        return getName()+"a"+terrorImplExtinct.getName()+ "="+height2Name;
 
 
     }
