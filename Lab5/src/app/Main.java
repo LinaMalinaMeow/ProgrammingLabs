@@ -1,58 +1,71 @@
 package app;
 
 import commands.*;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner userScanner = new Scanner(System.in);
-        Collection collection = new Collection();
-        FileManager fileManager = new FileManager(System.getenv("OGURETZ"));
-        fileManager.readCollection(collection);
-        // inputstream -> parse -> collection from file => collection = collection from file
-
-        Asker asker = new Asker(userScanner);
-
-        CommandManager commandManager = new CommandManager(
-                new Info(collection),
-                new Help(),
-                new Show(collection),
-                new AddElement(collection, asker),
-                new UpdateIDElement(collection, asker),
-                new RemoveByIDID(collection),
-                new Clear(collection),
-                new Save(collection, fileManager),
-                new ExecuteScriptFileName(),
-                new Exit(),
-                new RemoveFirst(collection),
-                new Head(collection),
-                new RemoveHead(collection),
-                new MinByDistanceTravelled(),
-                new PrintAscending(collection),
-                new PrintFieldAscendingNumberOfWheels(collection)
-        );
-        ConsoleManager consoleManager = new ConsoleManager(userScanner, commandManager,fileManager);
-        consoleManager.userMode();
-
-        FileInputStream fis = null;
-        int b = 0;
+        //Scanner userScanner = new Scanner(Paths.get("script.sc"));
 
         try {
-            fis = new FileInputStream("C:/../../papochka");
-            while ((b =fis.read())!= -1) {
-                System.out.println((char) b);
+            String path = System.getenv("BANANA_LAB5");
+            if (path == null) {
+                System.out.println("Переменная окружения не найдена");
+                return;
             }
-            } catch (IOException e) {
-                e.printStackTrace();
+            Repository repository = new Repository(path);
+            //System.out.println(repository);
+
+            Asker asker = new Asker(userScanner);
+            CommandManager commandManager = new CommandManager(
+                    new Info(repository),
+                    new Help(),
+                    new Show(repository),
+                    new AddElement(repository, asker),
+                    new UpdateIDElement(repository, asker),
+                    new RemoveByID(repository),
+                    new Clear(repository),
+                    new Save(repository),
+                    new ExecuteScriptFileName(repository),
+                    new Exit(repository),
+                    new RemoveFirst(repository),
+                    new Head(repository),
+                    new RemoveHead(repository),
+                    new MinByDistanceTravelled(repository),
+                    new PrintAscending(repository),
+                    new PrintFieldAscendingNumberOfWheels(repository)
+            );
+
+            ConsoleManager consoleManager = new ConsoleManager(userScanner, commandManager);
+            consoleManager.userMode();
+
+//            FileInputStream fis = null;
+//            int b = 0;
+//            try {
+//                fis = new FileInputStream("");
+//                while ((b = fis.read()) != -1) { //мы считываем каждый отдельный байт в переменную  b
+//                    //Когда в потоке больше нет данных для чтения, метод возвращает число -1.
+//                    System.out.println((char) b);//Затем каждый считанный байт конвертируется в объект типа char и выводится на консоль.
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-
-        //   path - "../../papochka" - papochka в project
-
-        //   path - "../papochka" - papochka в src
+//
+//        ArrayList<Vehicle> vehicles = new ArrayList<>();
+//        vehicles.sort(null);
+//
+//
+//        vehicles.sort(new Comparator<Vehicle>() {
+//            @Override
+//            public int compare(Vehicle o1, Vehicle o2) {
+//                return o1.getName().compareTo(o2.getName());
+//            }
+//        });
     }
 }

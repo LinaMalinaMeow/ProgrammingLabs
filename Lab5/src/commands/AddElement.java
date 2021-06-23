@@ -1,15 +1,20 @@
 package commands;
 
 import app.Asker;
-import app.Collection;
+import app.Repository;
 import data.Vehicle;
 
+/**
+ * @author alina hihihi meow
+ */
 public class AddElement extends AbstractCommand implements Command {
-    private Collection collection;
+    private Repository repository;
     private Asker asker;
-    public AddElement(Collection collection, Asker asker) {
+
+
+    public AddElement(Repository repository, Asker asker) {
         super("add", "добавить новый элемент в коллекцию");
-        this.collection = collection;
+        this.repository = repository;
         this.asker = asker; 
     }
 
@@ -18,7 +23,7 @@ public class AddElement extends AbstractCommand implements Command {
         Vehicle vehicle;
         try {
             vehicle = this.asker.createVehicle();
-            collection.getPriorityQueue().add(vehicle);
+            repository.add(vehicle);
         } catch(NullPointerException e) {
             System.out.println(e.getMessage());
         }

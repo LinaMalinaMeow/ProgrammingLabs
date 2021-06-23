@@ -1,16 +1,27 @@
 package commands;
-import app.ConsoleManager;
 
+import app.ConsoleManager;
+import app.Repository;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import java.io.IOException;
+
+/**
+ * @author alina
+ */
 public class Exit extends AbstractCommand implements Command {
     private ConsoleManager console;
+    private Repository repository;
 
     /**
-     * Command 'exit'. Exits the program.
+     *
+     * @param repository(Command 'exit'. Exits the program.)
      */
-
-    public Exit() {
+    public Exit(Repository repository) {
         super("exit", "завершить программу (без сохранения в файл");
         this.console = console;
+        this.repository = repository;
     }
 
     @Override

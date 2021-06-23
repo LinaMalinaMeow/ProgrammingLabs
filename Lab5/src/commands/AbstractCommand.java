@@ -1,11 +1,25 @@
 package commands;
+
+import data.Coordinates;
+import data.FuelType;
+
+import java.util.Date;
+
 abstract class AbstractCommand {
     private String name;
     private String description;
+    private Integer id;
+    private Coordinates coordinates;
+    private java.util.Date creationDate;
+    private Integer enginePower;
+    private Integer numberOfWheels;
+    private Integer distanceTravelled;
+    private FuelType fuelType;
 
-    public AbstractCommand(String name, String description) {
+    public AbstractCommand(String name, String description){
         this.name = name;
         this.description = description;
+
     }
 
     /**
@@ -20,6 +34,14 @@ abstract class AbstractCommand {
      */
     public String getDescription() {
         return description;
+    }
+
+    /**
+     *
+     * @return ID
+     */
+    public int getId(){
+        return id;
     }
 
     @Override

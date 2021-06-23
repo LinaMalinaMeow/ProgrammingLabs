@@ -1,8 +1,6 @@
 package app;
 import java.io.File;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+
 
 public class FileManager {
     private String path;

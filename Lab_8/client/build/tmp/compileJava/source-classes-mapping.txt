@@ -1,0 +1,56 @@
+connection/ResponseReaderImpl.java
+ connection.ResponseReaderImpl
+reader/InputManager.java
+ reader.InputManager
+app/AuthModule.java
+ app.AuthModule
+connection/ResponseReader.java
+ connection.ResponseReader
+app/Client.java
+ app.Client
+app/ClientAbstractFactory.java
+ app.ClientAbstractFactory
+connection/RequestSenderImpl.java
+ connection.RequestSenderImpl
+reader/ConsoleInputManager.java
+ reader.ConsoleInputManager
+reader/FileInputManager.java
+ reader.FileInputManager
+app/Main.java
+ app.Main
+connection/RequestSender.java
+ connection.RequestSender
+command/ClientExitCommand.java
+ command.ClientExitCommand
+app/AbstractFactory.java
+ app.AbstractFactory
+command/AuthCommand.java
+ command.AuthCommand
+reader/Asker.java
+ reader.Asker
+app/ClientImpl.java
+ app.ClientImpl
+command/LoginCommand.java
+ command.LoginCommand
+reader/AbstractAsker.java
+ reader.AbstractAsker
+reader/AbstractInputManager.java
+ reader.AbstractInputManager
+command/ClientCommand.java
+ command.ClientCommand
+app/AuthModuleImpl.java
+ app.AuthModuleImpl
+command/ExecuteScriptFileName.java
+ command.ExecuteScriptFileName
+reader/ConsoleAsker.java
+ reader.ConsoleAsker
+command/RegisterCommand.java
+ command.RegisterCommand
+command/CommandManager.java
+ command.CommandManager
+reader/FileAsker.java
+ reader.FileAsker
+command/ClientCommandManager.java
+ command.ClientCommandManager
+app/Test.java
+ app.Test

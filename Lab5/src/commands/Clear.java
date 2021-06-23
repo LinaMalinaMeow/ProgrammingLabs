@@ -1,18 +1,36 @@
 package commands;
 
-import app.Collection;
+import app.Repository;
+import exceptions.WrongArgumentException;
 
+
+/**
+ * @author alina
+ */
 public class Clear extends AbstractCommand implements Command {
-    Collection Collection;
-    public Clear(Collection Collection) {
+    Repository repository;
+
+
+    public Clear(Repository Repository) {
         super("clear", "очистить коллекцию");
-        this.Collection = Collection;
+        this.repository = Repository;
     }
 
     /**
      * Execute of 'clear' command.
      */
     @Override
-    public void execute(String argument) {
+    public void execute(String str) {
+        try {
+            if (!str.isEmpty()) {
+                throw new WrongArgumentException();
+            }
+            repository.clearCollection();
+            System.out.println("Колекция успешно очищена!");
+        } catch (WrongArgumentException e) {
+            System.out.println("Используйте: '" + getName() + "'");
+        } catch (Exception e) {
+            System.out.println("Что-то пошло не так. Повторите ввод.");
+        }
     }
 }

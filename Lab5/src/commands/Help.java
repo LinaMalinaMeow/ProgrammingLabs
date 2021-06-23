@@ -1,5 +1,6 @@
 package commands;
 
+
 public class Help extends AbstractCommand implements Command{
     public Help(){
         super("help","Вывести справку по доступным командам");

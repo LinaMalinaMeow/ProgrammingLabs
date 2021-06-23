@@ -2,8 +2,13 @@ package app;
 
 
 import commands.*;
+import exceptions.ScriptRecursionException;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class CommandManager {
     private Info info;
@@ -12,7 +17,7 @@ public class CommandManager {
     private Save save;
     private AddElement addElement;
     private UpdateIDElement updateIDElement;
-    private RemoveByIDID removeByIDID;
+    private RemoveByID removeByIDID;
     private Clear clear;
     private ExecuteScriptFileName executeScript;
     private Exit exit;
@@ -29,7 +34,7 @@ public class CommandManager {
                           Show show,
                           AddElement addElement,
                           UpdateIDElement updateIDElement,
-                          RemoveByIDID removeByIDID,
+                          RemoveByID removeByIDID,
                           Clear clear,
                           Save save,
                           ExecuteScriptFileName executeScript,
@@ -77,113 +82,150 @@ public class CommandManager {
 
 
     /**
-     * Start execute of 'info' command.
+     * @param str Start execute of 'info' command.
      */
-
     public void info(String str) {
         info.execute(str);
     }
+
     /**
-     * Start execute of 'help' command.
+     * @param str Start execute of 'help' command.
      */
     public void help(String str) {
 
-            help.execute(str);
+        help.execute(str);
     }
+
     /**
-     * Start execute of 'show' command.
+     * @param str Start execute of 'show' command.
      */
     public void show(String str) {
         show.execute(str);
     }
 
     /**
-     * Start execute of 'add' command.
+     * @param str Start execute of 'add' command.
      */
     public void add(String str) {
         addElement.execute(str);
     }
 
     /**
-     * Start execute of 'update' command.
+     * @param str Start execute of 'update' command.
      */
     public void update(String str) {
         updateIDElement.execute(str);
     }
 
     /**
-     * Start execute of 'removeById' command.
+     * @param str Start execute of 'removeById' command.
      */
     public void removeById(String str) {
         removeByIDID.execute(str);
     }
 
     /**
-     * Start execute of 'clear' command.
+     * @param str Start execute of 'clear' command.
      */
     public void clear(String str) {
         clear.execute(str);
     }
 
     /**
-     * Start execute of 'save' command.
+     * @param str Start execute of 'save' command.
      */
     public void save(String str) {
         save.execute(str);
     }
 
     /**
-     * Start execute of 'executeScript' command.
+     * @param str Start execute of 'executeScript' command.
+     * Создание заготовки для команд, подключение считки с файла и построчный считка;
+     * если файл пуст- бросаю ошибку, если не пустой, тогда начинаю по строчке считывать и делить на команду и аргумент
+     *(и если это не рекурсия, тогда отправляем в обычную обработку).
      */
     public void executeScript(String str) {
-        executeScript.execute(str);
+        String[] userCommand;
+        try (Scanner scriptScanner = new Scanner(new File(str))) {
+            if (!scriptScanner.hasNext()) throw new NoSuchElementException();
+            do {
+                userCommand = (scriptScanner.nextLine().trim() + " ").split(" ", 2);
+                userCommand[1] = userCommand[1].trim();
+                while (scriptScanner.hasNextLine() && userCommand[0].isEmpty()) {
+                    userCommand = (scriptScanner.nextLine().trim() + " ").split(" ", 2);
+                    userCommand[1] = userCommand[1].trim();
+                }
+                System.out.println(String.join(" ", userCommand));//выводим с разделителем пробел, то есть команда пробел аргумент
+                if (userCommand[0].equals("execute_script")) {
+                    throw new ScriptRecursionException();
+                }
+                startCommand(userCommand);
+            } while (scriptScanner.hasNextLine());
+        } catch (FileNotFoundException exception) {
+            System.out.println("Файл со скриптом не найден!");
+        } catch (ScriptRecursionException e) {
+            System.out.println("Скрипты не могут вызываться рекурсивно!");
+
+        } catch (NoSuchElementException exception) {
+            System.out.println("Файл со скриптом пуст!");
+        } catch (Exception e) {
+            System.out.println("Что-то пошло не так. Перезапустите программу");
+        }
     }
 
     /**
-     * Start execute of 'exit' command.
+     * @param str Start execute of 'exit' command.
      */
     public void exit(String str) {
         exit.execute(str);
     }
 
     /**
-     * Start execute of 'head' command.
+     * @param str Start execute of 'head' command.
      */
     public void head(String str) {
         head.execute(str);
     }
 
     /**
-     * Start execute of 'printFieldAscendingNumberOfWheels' command.
+     * @param str Start execute of 'printFieldAscendingNumberOfWheels' command.
      */
     public void printFieldAscendingNumberOfWheels(String str) {
         printFieldAscendingNumberOfWheels.execute(str);
     }
 
     /**
-     * Start execute of 'printAscending' command.
+     * @param str Start execute of 'printAscending' command.
      */
     public void printAscending(String str) {
         printAscending.execute(str);
     }
 
     /**
-     * Start execute of 'minByDistanceTravelled' command.
+     * @param str Start execute of 'minByDistanceTravelled' command.
      */
     public void minByDistanceTravelled(String str) {
         minByDistanceTravelled.execute(str);
     }
 
     /**
-     * Start execute of 'removeFirst' command.
+     * @param str Start execute of 'removeFirst' command.
      */
     public void removeFirst(String str) {
         removeFirst.execute(str);
     }
 
+    /**
+     * @param str Start execute of 'removeHead' command.
+     */
     public void removeHead(String str) {
+        removeHead.execute(str);
     }
 
+    /**
+     * @param userCommand Проверка на внутреннюю команду(команду, находящуюся в программе хы)
+     * Массив из двух ячеек- в одной название, а в  другой данные
+     */
     public void startCommand(String[] userCommand) {
         switch (userCommand[0]) {
             case "exit":

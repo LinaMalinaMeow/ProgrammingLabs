@@ -1,0 +1,32 @@
+21.06.2021 15:33:57.025 [main] INFO   data.PSQLDAOFactory - Successfully connected to the data base.
+21.06.2021 15:33:57.599 [main] DEBUG  c.CollectionManagerImpl - Коллекция загружена из файла.
+21.06.2021 15:34:14.865 [pool-2-thread-4] DEBUG  c.ServerConnectionManager - Соединение с клиентом установлено.
+21.06.2021 15:34:14.907 [Thread-2] DEBUG  c.ServerCommandManager - Выполнена команда: login
+21.06.2021 15:34:15.208 [Thread-2] INFO   c.ServerConnectionManager - Запрос Request{type=EXECUTE, command='login', vehicle=null, arg='null', user=UserImpl{login='user', password='******'}} успешно обработан.
+Ответ: Response: , successful=true
+21.06.2021 15:34:15.213 [Thread-3] DEBUG  c.ServerConnectionManager - Ответ клиенту отправлен.
+21.06.2021 15:34:18.754 [pool-2-thread-4] DEBUG  c.ServerConnectionManager - Соединение с клиентом установлено.
+21.06.2021 15:34:19.023 [Thread-4] DEBUG  c.ServerCommandManager - Выполнена команда: show
+21.06.2021 15:34:19.040 [Thread-4] INFO   c.ServerConnectionManager - Запрос Request{type=EXECUTE, command='show', vehicle=null, arg='null', user=UserImpl{login='user', password='******'}} успешно обработан.
+Ответ: Response: , successful=true
+21.06.2021 15:34:19.066 [Thread-5] DEBUG  c.ServerConnectionManager - Ответ клиенту отправлен.
+21.06.2021 15:34:24.105 [pool-2-thread-4] DEBUG  c.ServerConnectionManager - Соединение с клиентом установлено.
+21.06.2021 15:34:24.370 [Thread-6] DEBUG  c.ServerCommandManager - Выполнена команда: show
+21.06.2021 15:34:24.373 [Thread-6] INFO   c.ServerConnectionManager - Запрос Request{type=EXECUTE, command='show', vehicle=null, arg='null', user=UserImpl{login='user', password='******'}} успешно обработан.
+Ответ: Response: , successful=true
+21.06.2021 15:34:24.379 [Thread-7] DEBUG  c.ServerConnectionManager - Ответ клиенту отправлен.
+21.06.2021 15:34:29.396 [pool-2-thread-3] DEBUG  c.ServerConnectionManager - Соединение с клиентом установлено.
+21.06.2021 15:34:29.662 [Thread-8] DEBUG  c.ServerCommandManager - Выполнена команда: show
+21.06.2021 15:34:29.669 [Thread-8] INFO   c.ServerConnectionManager - Запрос Request{type=EXECUTE, command='show', vehicle=null, arg='null', user=UserImpl{login='user', password='******'}} успешно обработан.
+Ответ: Response: , successful=true
+21.06.2021 15:34:29.669 [Thread-9] DEBUG  c.ServerConnectionManager - Ответ клиенту отправлен.
+21.06.2021 15:34:34.689 [pool-2-thread-2] DEBUG  c.ServerConnectionManager - Соединение с клиентом установлено.
+21.06.2021 15:34:34.948 [Thread-10] DEBUG  c.ServerCommandManager - Выполнена команда: show
+21.06.2021 15:34:34.955 [Thread-10] INFO   c.ServerConnectionManager - Запрос Request{type=EXECUTE, command='show', vehicle=null, arg='null', user=UserImpl{login='user', password='******'}} успешно обработан.
+Ответ: Response: , successful=true
+21.06.2021 15:34:34.956 [Thread-11] DEBUG  c.ServerConnectionManager - Ответ клиенту отправлен.
+21.06.2021 15:34:39.965 [pool-2-thread-4] DEBUG  c.ServerConnectionManager - Соединение с клиентом установлено.
+21.06.2021 15:34:40.239 [Thread-12] DEBUG  c.ServerCommandManager - Выполнена команда: show
+21.06.2021 15:34:40.247 [Thread-12] INFO   c.ServerConnectionManager - Запрос Request{type=EXECUTE, command='show', vehicle=null, arg='null', user=UserImpl{login='user', password='******'}} успешно обработан.
+Ответ: Response: , successful=true
+21.06.2021 15:34:40.247 [Thread-13] DEBUG  c.ServerConnectionManager - Ответ клиенту отправлен.

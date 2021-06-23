@@ -1,7 +1,9 @@
+import sun.applet.Main
+
 plugins {
     id 'java'
 }
-
+//sourceSets.main.java.srcDirs = ['src']
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -17,11 +19,11 @@ compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-task customFatJar(type: Jar){
-    manifest{
-        attributes 'Main-Class':'App.Main'
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'app.Main'
     }
-    baseName='DemoFat'
-    from{configurations.compile.collect{it.isDirectory() ? it: zipTree()}}
+    baseName = 'DemoFat'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree() } }
     with jar
 }

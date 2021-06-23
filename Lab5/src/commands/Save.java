@@ -1,20 +1,21 @@
 package commands;
 
-import app.Collection;
-import app.FileManager;
-
-import java.io.File;
+import app.Repository;
 
 public class Save extends AbstractCommand implements Command{
-    private Collection collection;
-    private FileManager fileManager;
-    public Save(Collection collection,  FileManager fileManager){
+    private Repository repository;
+
+    public Save(Repository repository){
         super("save","сохранить коллекцию в файл");
-        this.collection = collection;
-        this.fileManager = fileManager;
+        this.repository = repository;
     }
     @Override
     public void execute(String str){
-        this.fileManager.writeCollection(this.collection);
+        try {
+            this.repository.saveXml();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

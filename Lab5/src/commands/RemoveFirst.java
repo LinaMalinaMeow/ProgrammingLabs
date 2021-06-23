@@ -1,21 +1,22 @@
 package commands;
 
-import app.Collection;
+import app.Repository;
 
 public class RemoveFirst extends AbstractCommand implements Command {
-    private Collection collection;
-    public RemoveFirst(Collection collection){
+    private Repository repository;
+
+    public RemoveFirst(Repository repository){
         super("remove_first", "удалить первый элемент из коллекции");
-        this.collection= collection;
+        this.repository = repository;
 
     }
     @Override
     public void execute(String str){
 
-        if(this.collection.getPriorityQueue().peek() == null) {
+        if(this.repository.getPriorityQueue().peek() == null) {
             System.out.println("Невозможно удалить первый элемент коллекции так как его нет");
         } else {
-            this.collection.getPriorityQueue().remove(this.collection.getPriorityQueue().peek());
+            this.repository.getPriorityQueue().remove(this.repository.getPriorityQueue().peek());
             System.out.println("Первый элемент коллекции удалён!");
         }
 
